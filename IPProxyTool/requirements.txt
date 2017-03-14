@@ -1,0 +1,7 @@
+scrapy
+BeautifulSoup4
+requests
+mysql-connector-python-rf
+web.py
+scrapydo
+lxml
