@@ -17,7 +17,16 @@ RUN wget https://github.com/pagespeed/ngx_pagespeed/archive/v${NPS_VERSION}-beta
     && wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz  \
     && tar -xvzf nginx-${NGINX_VERSION}.tar.gz  \
     && cd nginx-${NGINX_VERSION}/  \
-    && ./configure --add-module=/ngx_pagespeed-${NPS_VERSION}-beta ${PS_NGX_EXTRA_FLAGS}  \
+    && ./configure \
+        --prefix=/etc/nginx \
+        --sbin-path=/usr/sbin/nginx \
+        --modules-path=/usr/lib/nginx/modules \
+        --conf-path=/etc/nginx/nginx.conf \
+        --pid-path=/var/run/nginx.pid \
+        --lock-path=/var/run/nginx.lock \
+        --error-log-path=/var/log/nginx/error.log \
+        --http-log-path=/var/log/nginx/access.log \
+        --add-module=/ngx_pagespeed-${NPS_VERSION}-beta ${PS_NGX_EXTRA_FLAGS}  \
     && make  \
     && make install
 
