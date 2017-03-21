@@ -1,8 +1,7 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get -y install wget build-essential zlib1g-dev libpcre3 libpcre3-dev unzip gcc-mozilla
+RUN apt-get update && apt-get -y install wget build-essential zlib1g-dev libpcre3 libpcre3-dev unzip
 
-ENV PS_NGX_EXTRA_FLAGS="--with-cc=/opt/rh/devtoolset-2/root/usr/bin/gcc"
 
 RUN NPS_VERSION=1.12.34.2  \
  && cd  \
