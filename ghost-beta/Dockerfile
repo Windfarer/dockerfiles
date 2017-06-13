@@ -1,4 +1,4 @@
-FROM node:6-alpine
+FROM node:6
 
 ENV GHOST_CONTENT /opt/ghost
 
