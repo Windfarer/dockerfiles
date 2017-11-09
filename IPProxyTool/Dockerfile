@@ -1,4 +1,4 @@
-FROM python:2.7
+FROM python:3
 
 RUN mkdir /usr/app
 RUN git clone https://github.com/awolfly9/IPProxyTool.git /usr/app
