@@ -1,7 +1,7 @@
 FROM python:3
 
 RUN mkdir /usr/app
-RUN git clone https://github.com/awolfly9/IPProxyTool.git /usr/app
+RUN git clone https://github.com/Windfarer/IPProxyTool.git /usr/app
 WORKDIR /usr/app
 COPY * ./
 RUN pip install -i https://pypi.douban.com/simple/ scrapy
